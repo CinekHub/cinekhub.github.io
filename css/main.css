@@ -119,6 +119,7 @@ body {
     font-size: 28px !important;
     font-weight: 600 !important;
     color: #ffae00 !important;
+    text-align:center;
 }
 
 .statistics {
@@ -188,6 +189,9 @@ color: rgba(255, 255, 255, 0.46) !important
     padding: 5px 6px !important;
     color: #ecf2ff;
     padding: 30px 30px !important
+}
+.card-btn{
+    text-align:center
 }
 
 .footer .nouridio {
