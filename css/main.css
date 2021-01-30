@@ -104,9 +104,9 @@ body {
     font-size: 36px !important
 }
 .mtitle{
-    line-height: 45px !important;
-    margin-bottom: -6px !important;
-    font-size: 24px !important
+    line-height: 90px !important;
+    margin-bottom: -2px !important;
+    font-size: 32px !important
 }
 .subtitle {
     color: rgba(255, 255, 255, 0.685) !important;
@@ -115,7 +115,7 @@ body {
 }
 .msubtitle {
     color: rgba(255, 255, 255, 0.685) !important;
-    font-size: 8x !important;
+    font-size: 10x !important;
     font-family: 'Lato', sans-serif;
 }
 .features {
