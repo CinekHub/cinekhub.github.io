@@ -40,6 +40,7 @@ body {
     text-transform: capitalize !important;
     background-color: #ffffff33;
 }
+
 @media screen and (max-width: 500px) {
     .navbar a {
       float: none;
@@ -102,9 +103,19 @@ body {
     margin-bottom: -2px !important;
     font-size: 36px !important
 }
+.mtitle{
+    line-height: 45px !important;
+    margin-bottom: -6px !important;
+    font-size: 24px !important
+}
 .subtitle {
     color: rgba(255, 255, 255, 0.685) !important;
     font-size: 16px !important;
+    font-family: 'Lato', sans-serif;
+}
+.msubtitle {
+    color: rgba(255, 255, 255, 0.685) !important;
+    font-size: 8x !important;
     font-family: 'Lato', sans-serif;
 }
 .features {
