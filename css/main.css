@@ -94,6 +94,9 @@ body {
 .heading {
     padding: 160px 50px !important;
     color: #fff !important;
+
+}
+.heading-b{
     background-image: url("../assets/Blaszk.svg") !important;
     background-position: bottom !important;
     background-size: 200% !important;
