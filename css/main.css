@@ -1,8 +1,11 @@
+/*root ,#845ec2, #d65db1*/ 
+:root{
+    --gradient: linear-gradient(45deg, #ee6352, #ffae00, #ffea29);
+    --blackgradient: linear-gradient(45deg, #c054a0 #e25f4d, #eea300, #ebd619);
+}
 /* Body */
 body {
     font-family: 'Poppins', sans-serif !important;
-        background-image: url(../assets/bg.png);
-    background-color: #1D1E28;
     color: #fff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -10,6 +13,7 @@ body {
     border-top: 6px #ffae00 solid !important;
     font-size: 16px;
     font-weight: bold;
+    background-color:#1D1E28;
 }
 /* Login */
  .login-btn {
@@ -17,23 +21,29 @@ body {
      font-size: 10px !important;
  }
  .login-btn:hover {
-     background: #ffae00 !important;
+    background-position: left;
+    background: var(--gradient);
+    background-size: 300%;
  }
- .nav-link:hover {
-    background: transparent !important;
-    color: #ffae00 !important;
-    font-weight: bold !important;
- }
+
 /* Navigacja */
 .navbar {
     width: 100%;
     background-color: #555;
     box-shadow: none !important
 }
+/*Aktywy*/
 .active {
-    background-color: #ffae00;
+    background-position: left;
+    background: var(--gradient);
+    background-size: 300%;
     border-radius: 7px;
+    transition: background-position 400ms;
 }
+.active:hover {
+    background-position: right;
+}
+/*Navlin*/
 .nav-link {
     font-size: 14px !important;
     background: transparent !important;
@@ -41,6 +51,11 @@ body {
     text-transform: capitalize !important;
     background-color: #ffffff33;
 }
+.nav-link:hover {
+    background: transparent !important;
+    color: #e6e6e6 !important;
+    font-weight: bold !important;
+ }
 
 @media screen and (max-width: 500px) {
     .navbar a {
@@ -48,30 +63,6 @@ body {
       display: block;
     }
   }
-/* Tool Timps*/
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-}
-.tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-    
-    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
-    opacity: 0;
-    transition: opacity 1s;
-}
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
@@ -85,10 +76,22 @@ body {
 }
 
 .btn-primary {
-    background-color: #ffae00!important
+    background-position: left;
+    background: var(--gradient);
+    background-size: 300%;
+    transition: background-position 400ms;
+}
+.btn-primary:hover{
+    background-position: right;
 }
 .btn-secondary {
-    background-color: #2C2F33 !important
+    background-color: #2C2F33 !important;
+    opacity: 100%;
+    transition: opocity 100ms
+}
+.btn-secondary:hover{
+    background: var(--gradient); 
+    opocity: 0%
 }
 /* Napis */
 .heading {
@@ -102,7 +105,7 @@ body {
 .title {
     line-height: 90px !important;
     margin-bottom: -2px !important;
-    font-size: 36px !important
+    font-size: 36px !important;
 }
 .mtitle{
     line-height: 90px !important;
@@ -156,7 +159,7 @@ body {
 }
 
 .card-title {
-    font-size: 28px !important;
+    font-size: 32px !important;
     font-weight: 600 !important;
     color: #ffae00 !important;
     text-align:center;
@@ -257,16 +260,20 @@ color: rgba(255, 255, 255, 0.46) !important
 ::-webkit-scrollbar {
     width: 10px;
 }
-/* Track */
-::-webkit-scrollbar-thumb:hover {
-    background: #be7c18; 
-}
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #ffb516; 
+    background-position: left;
+    background: var(--gradient);
+    background-size: 300%;
     border-radius: 5px;
 }
-/* Handle on hover */
-::-webkit-scrollbar-track {
-    background: #1d1e2800;
+    
+@keyframes bg-animation{
+    0% {
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
 }
