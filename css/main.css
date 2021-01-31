@@ -1,7 +1,7 @@
 /*root ,#845ec2, #d65db1*/ 
 :root{
     --gradient: linear-gradient(45deg, #ee6352, #ffae00, #ffea29);
-    --blackgradient: linear-gradient(45deg, #c054a0 #e25f4d, #eea300, #ebd619);
+    --blackgradient: linear-gradient(45deg #e25f4d, #eea300, #ebd619);
 }
 /* Body */
 body {
@@ -39,6 +39,7 @@ body {
     background-size: 300%;
     border-radius: 7px;
     transition: background-position 400ms;
+    animation: bg-animation 10s infinite;
 }
 .active:hover {
     background-position: right;
@@ -85,13 +86,9 @@ body {
     background-position: right;
 }
 .btn-secondary {
-    background-color: #2C2F33 !important;
-    opacity: 100%;
-    transition: opocity 100ms
+    background-color: #2C2F33 !important
 }
 .btn-secondary:hover{
-    background: var(--gradient); 
-    opocity: 0%
 }
 /* Napis */
 .heading {
@@ -164,12 +161,22 @@ body {
     color: #ffae00 !important;
     text-align:center;
 }
-
+/*statystyki*/
 .statistics {
     text-align: center !important;
     padding-top: 300px !important;
 }
-
+.statistics-title{
+    background-position: left;
+    background: var(--gradient);
+    background-size: 300%;
+    border-radius: 7px;
+    transition: background-position 400ms;
+    animation: bg-animation 10s infinite;
+    background-clip: text;
+  -webkit-background-clip: text;
+  color: rgba(0,0,0,.2);
+}
 .statistics .card-body{
     padding: 0 !important;
     height: 280 !important;
@@ -267,13 +274,17 @@ color: rgba(255, 255, 255, 0.46) !important
     background: var(--gradient);
     background-size: 300%;
     border-radius: 5px;
+    animation: bg-animation 1s infinite;
 }
     
 @keyframes bg-animation{
     0% {
         background-position: left;
     }
-    100%{
+    50%{
         background-position: right;
+    }
+    100%{
+        background-position: left;
     }
 }
